@@ -1,7 +1,6 @@
 # docker-compose-laravel
-A pretty simplified Docker Compose workflow that sets up a LEMP network of containers for local Laravel development. You can view the full article that inspired this repo [here](https://dev.to/aschmelyun/the-beauty-of-docker-for-local-laravel-development-13c0).
 
-[![GitNFT](https://img.shields.io/badge/%F0%9F%94%AE-Open%20in%20GitNFT-darkviolet?style=flat)](https://gitnft.quine.sh/app/commits/list/repo/docker-compose-laravel)
+A even-more-simplified version of [aschmelyun/docker-compose-laravel](https://github.com/aschmelyun/docker-compose-laravel)
 
 ## Usage
 
@@ -30,10 +29,7 @@ Three additional containers are included that handle Composer, NPM, and Artisan 
 If you encounter any issues with filesystem permissions while visiting your application or running a container command, try completing one of the sets of steps below.
 
 **If you are using your server or local environment as the root user:**
-
-- Bring any container(s) down with `docker-compose down`
-- Rename `docker-compose.root.yml` file to `docker-compose.root.yml`, replacing the previous one
-- Re-build the containers by running `docker-compose build --no-cache`
+- This feature has been removed for simplicity. I don't yet / have not yet personally needed to run any service differently.
 
 **If you are using your server or local environment as a user that is not root:**
 
