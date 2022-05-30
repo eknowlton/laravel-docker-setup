@@ -9,8 +9,8 @@ services:
       context: ./dockerfiles
       dockerfile: nginx.dockerfile
       args:
-        - UID=${UID:-1000}
-        - GID=${GID:-1000}
+        - UID=1000
+        - GID=1000
     container_name: nginx
     ports:
       - 80:80
@@ -32,8 +32,8 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_DATABASE: homestead
-      MYSQL_USER: homestead
+      MYSQL_DATABASE: plumbx
+      MYSQL_USER: root 
       MYSQL_PASSWORD: secret
       MYSQL_ROOT_PASSWORD: secret
       SERVICE_TAGS: dev
@@ -46,8 +46,8 @@ services:
       context: ./dockerfiles
       dockerfile: php.dockerfile
       args:
-        - UID=${UID:-1000}
-        - GID=${GID:-1000}
+        - UID=1000
+        - GID=1000
     container_name: php
     volumes:
       - ./src:/var/www/html:delegated
@@ -68,8 +68,8 @@ services:
       context: ./dockerfiles
       dockerfile: composer.dockerfile
       args:
-        - UID=${UID:-1000}
-        - GID=${GID:-1000}
+        - UID=1000
+        - GID=1000
     container_name: composer
     volumes:
       - ./src:/var/www/html
@@ -99,8 +99,8 @@ services:
       context: ./dockerfiles
       dockerfile: php.dockerfile
       args:
-        - UID=${UID:-1000}
-        - GID=${GID:-1000}
+        - UID=1000
+        - GID=1000
     container_name: artisan
     volumes:
       - ./src:/var/www/html:delegated
